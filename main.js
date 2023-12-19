@@ -5,14 +5,8 @@ const timeNow = document.querySelector(".timeNow");
 const allDay = document.querySelector(".allDay");
 
 function countdownToLunarNewYear() {
-  // Tính ngày Tết âm lịch
-  const year = 2024; // Năm Âm lịch 2024 (Bính Thân)
-  const lunarDate = LunarDate.fromGregorianDate(new Date(year, 1, 1)); // Chuyển đổi ngày Dương lịch thành Âm lịch
-  const lunarYear = lunarDate.lunarYear;
-  const lunarMonth = lunarDate.lunarMonth;
-  const lunarDay = lunarDate.lunarDay;
-
-  const tetDate = new Date(year, lunarMonth - 1, lunarDay); // Ngày Tết Âm lịch
+  // Đặt ngày Tết Nguyên Đán âm lịch 2024 (ví dụ: 10 tháng 2, 2024)
+  const tetDate = new Date(2024, 1, 10); // Tháng 2 = tháng 1 theo chỉ số (0-11)
 
   const now = new Date();
   const gap = tetDate.getTime() - now.getTime();
